@@ -1,0 +1,130 @@
+
+.bgColor {
+    background-color: rgb(36, 32, 32);
+}
+
+/*GRID*/
+.primerGrid {
+    display: grid;
+    grid-template-columns: 50px 200px 50px 200px;
+    grid-template-rows: 200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* /css index  */
+li {
+    list-style-type: none;
+    padding: 10px;
+    margin: 10px;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+        "header header"
+        "imagenPrincipal imagenPrincipal"
+        "encabezado encabezado"
+        "img texto"
+        "footer footer";
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    margin-bottom: 50px;
+    background-color: rgb(199, 23, 23);
+    position: sticky;
+    top: 0;
+}
+
+.imgPrincipal {
+    grid-area: imagenPrincipal;
+}
+
+.encabezado {
+    grid-area: encabezado;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.texto {
+    background-color: rgb(199, 23, 23);
+    grid-area: texto;
+    padding: 30px;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    background-color: rgb(199, 23, 23);
+
+}
+
+.imgPrincipal img,
+.img img {
+    width: 100%
+}
+
+nav {
+    width: 100%
+}
+
+.rrhh .sucursales {
+    padding: 100px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media only screen and (max-width: 768px){
+	body .gridIndex{background-color: rgb(128, 0, 28);}
+	header,footer{flex-direction: column;}
+	li{padding: 5px;}
+	ul{padding: 0;}
+	.gridMain{
+	display:flex;
+	flex-direction: column;
+	}
+}
+@media only screen and (min-width: 769px) and (max-width: 1023px){
+	body .gridIndex{background-color: orange;}
+}
+
+.gradiente{
+	background-image: linear-gradient(rgb(199, 22, 22),rgb(245, 245, 245));
+}
+
+.gradientefooter{
+	background-image: linear-gradient(to top, red,rgb(255, 255, 255));
+}
+
+@keyframes desaparecer{
+	0%{opacity: 1;}
+	100%{opacity: 0;}
+}
+.animacion{
+	animation-name: desaparecer;
+	animation-iteration-count: 5;
+	animation-duration: 3s;
+	animation-delay: 1s;
+}
+
+.translateY{
+	transition: all 1s;
+}
+.translateY:hover{
+	transform: translateY(-20px);
+}
